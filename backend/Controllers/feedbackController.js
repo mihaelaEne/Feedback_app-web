@@ -1,6 +1,5 @@
 import { Feedback } from "../Models/feedback.js";
 
-//get all feedback by activity id
 const getFeedbackByActivity = async (req, res, next) => {
     try {
         const activityId = req.params.activityId;
@@ -17,7 +16,6 @@ const getFeedbackByActivity = async (req, res, next) => {
     }
 };
 
-//get all feedback
 const getAllFeedback = async (req, res, next) => {
     try {
         const feedback = await Feedback.findAll();
@@ -32,7 +30,6 @@ const getAllFeedback = async (req, res, next) => {
 
 
 
-//insert new feedback
 const insertFeedback = async (req, res, next) => {
     try {
         const feedback = await Feedback.create({

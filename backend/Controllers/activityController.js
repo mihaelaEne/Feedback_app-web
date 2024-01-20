@@ -2,7 +2,6 @@ import { Activity } from '../Models/activity.js';
 import { Professor } from '../Models/professor.js';
 import { Sequelize } from 'sequelize';
 
-//get activities by professor id
 const getActivitiesByProfessor = async (req, res, next) => {
   try {
     const professorId = req.params.professorId;
@@ -23,7 +22,6 @@ const getActivitiesByProfessor = async (req, res, next) => {
   }
 };
 
-//get activity by id
 const getActivityById = async (req, res, next) => {
   try {
     const activityId = req.params.activityId;
@@ -42,7 +40,6 @@ const getActivityById = async (req, res, next) => {
   }
 };
 
-//get all activities
 const getAllActivities = async (req, res, next) => {
   try {
     const activities = await Activity.findAll({
@@ -61,7 +58,6 @@ const getAllActivities = async (req, res, next) => {
   }
 };
 
-//insert new activity
 const insertActivity = async (req, res, next) => {
   try {
     const activity = await Activity.create({
@@ -77,7 +73,6 @@ const insertActivity = async (req, res, next) => {
   }
 };
 
-// search currently active activities by search term
 const searchActivities = async (req, res, next) => {
   try {
     const searchTerm = req.query.q;
@@ -109,7 +104,6 @@ const searchActivities = async (req, res, next) => {
   }
 };
 
-//update an activity
 const updateActivity = async (req, res, next) => {
   try {
     const activityId = req.params.activityId;
@@ -134,7 +128,6 @@ const updateActivity = async (req, res, next) => {
   }
 };
 
-//delete an activity
 const deleteActivity = async (req, res, next) => {
   try {
     const activityId = req.params.activityId;
