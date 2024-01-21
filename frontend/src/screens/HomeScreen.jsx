@@ -61,11 +61,11 @@ const HomeScreen = () => {
       <div className="home-screen">
         <div className="banner">
           <img src="/feedback.png" alt="Logo" className="logo" />
-          <h1 className="title">Feedback App</h1>
+          <h1 className="title">Feedback App - Tehnologii WEB</h1>
         </div>
         <div className="header-text">
           <p className="tagline">
-            Easily collect and manage feedback for professors and students
+            Project made by: Balaceanu Costin, Mardar Ilinca and Ene Mihaela
           </p>
         </div>
         <div className="container-buttons">
@@ -78,7 +78,7 @@ const HomeScreen = () => {
               onMouseLeave={handleStudentMouseLeave}
               onClick={handleLoginStudent}
             >
-              Student
+              Student 
             </button>
           </div>
 

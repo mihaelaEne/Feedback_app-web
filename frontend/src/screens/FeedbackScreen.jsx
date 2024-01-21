@@ -8,25 +8,27 @@ import ModalFeedback from '../components/ModalFeedback';
 const FeedbackScreen = () => {
   const location = useLocation();
   const activity = location.state.activity;
-  const [emoticon, setEmoticon] = useState('smiley'); // set initial emoticon value
+  //setez o val initiala pt emoticon
+  const [emoticon, setEmoticon] = useState('smiley'); 
   const [professorName, setProfessorName] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false); // Initialize isModalOpen state variable
+  //initializez isModalOpen
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   useEffect(() => {
-    // Make an API request to get the professor's information
+    // requestul de api pt info despre prof
     axios
       .get(`http://localhost:5001/api/professors/${activity.professorId}`)
       .then((response) => {
-        // Set the professorName state variable to the value of the name field in the response data
+        //setez numele profului ca state variable pt campul ca sa corespunda
         setProfessorName(response.data.data.name);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [activity]); // Only re-run the effect when the activity changes
+  }, [activity]); //  sa imi re run efectul cand se sch activ
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // prevent default form submission action (page refresh)
+    event.preventDefault(); // un refresh 
     axios
       .post(`http://localhost:5001/api/activities/${activity.id}`, {
         activityId: activity.id,

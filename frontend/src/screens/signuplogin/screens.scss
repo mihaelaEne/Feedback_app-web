@@ -16,12 +16,12 @@
   margin-left: 600px;
   width: 900px;
   height: 500px;
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: rgba(215, 10, 127, 0.13);
   transform: translate(-50%, -50%);
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  border: 2px solid rgba(240, 3, 185, 0.1);
+  box-shadow: 0 0 40px rgba(75, 59, 198, 0.6);
   .form-login {
     margin-top: 15px;
     display: flex;
@@ -90,10 +90,10 @@
       .text-signup {
         font-size: 25px;
         font-weight: 400;
-        color: #80ff72;
+        color: #1e1384;
       }
       .text-signup:hover {
-        color: #00b712;
+        color: #1e1384;
         cursor: pointer;
       }
     }

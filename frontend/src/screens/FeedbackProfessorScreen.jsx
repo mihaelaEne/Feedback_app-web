@@ -18,7 +18,7 @@ function FeedbackProfessorScreen() {
       .then((response) => {
         const data = response.data.data;
         setFeedbackData(data);
-        // fetching the title of the activity
+        // fetch la titul activitatii
         axios.get(`http://localhost:5001/api/activities/${activityId}`)
         .then((res) => {
           const activity = res.data.data;
@@ -27,7 +27,7 @@ function FeedbackProfessorScreen() {
       });
   }, [activityId]);
 
-  // creating an object to hold the counts of each emoji
+  // obiect care sa imi tina evidenta la emonjiuri
   let emojiCounts = {};
   feedbackData.forEach((feedback) => {
     if (!emojiCounts[feedback.emoticon]) {
